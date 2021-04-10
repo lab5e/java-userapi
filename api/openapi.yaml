@@ -3,12 +3,12 @@ info:
   contact:
     email: dev@lab5e.com
     name: Lab5e AS
-    url: https://api.lab5e.com/user
+    url: https://docs.lab5e.com
   description: API to manage teams, members and tokens
   title: The User API
-  version: 1.3.4 breezy-leafy
+  version: 1.3.5 everlasting-ashanti
 servers:
-- url: https://api.lab5e.com/user
+- url: https://api.lab5e.com/
 security:
 - APIToken: []
 tags:

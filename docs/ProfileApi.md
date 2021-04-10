@@ -1,6 +1,6 @@
 # ProfileApi
 
-All URIs are relative to *https://api.lab5e.com/user*
+All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -28,7 +28,7 @@ import com.lab5e.user.ProfileApi;
 public class Example {
   public static void main(String[] args) {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://api.lab5e.com/user");
+    defaultClient.setBasePath("https://api.lab5e.com");
     
     // Configure API key authorization: APIToken
     ApiKeyAuth APIToken = (ApiKeyAuth) defaultClient.getAuthentication("APIToken");
