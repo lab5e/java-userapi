@@ -28,7 +28,7 @@ import java.io.IOException;
  * Invite. Invites are used to share access to teams. You must be an administrator to generate invites for a team.
  */
 @ApiModel(description = "Invite. Invites are used to share access to teams. You must be an administrator to generate invites for a team.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-10T13:18:28.427Z[GMT]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-14T16:09:51.502Z[GMT]")
 public class Invite {
   public static final String SERIALIZED_NAME_CODE = "code";
   @SerializedName(SERIALIZED_NAME_CODE)

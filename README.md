@@ -1,10 +1,8 @@
 # user-java-client
 
-Dummy
-
 The User API
 - API version: 1.3.5 everlasting-ashanti
-  - Build date: 2021-04-10T13:18:28.427Z[GMT]
+  - Build date: 2021-04-14T16:09:51.502Z[GMT]
 
 API to manage teams, members and tokens
 
