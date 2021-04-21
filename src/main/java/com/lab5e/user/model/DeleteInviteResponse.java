@@ -20,40 +20,41 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.lab5e.user.model.Invite;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * AcceptInviteRequest
+ * DeleteInviteResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-21T11:56:07.327Z[GMT]")
-public class AcceptInviteRequest {
-  public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
-  private String code;
+public class DeleteInviteResponse {
+  public static final String SERIALIZED_NAME_INVITE = "invite";
+  @SerializedName(SERIALIZED_NAME_INVITE)
+  private Invite invite;
 
 
-  public AcceptInviteRequest code(String code) {
+  public DeleteInviteResponse invite(Invite invite) {
     
-    this.code = code;
+    this.invite = invite;
     return this;
   }
 
    /**
-   * The invite code to use.
-   * @return code
+   * Get invite
+   * @return invite
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The invite code to use.")
+  @ApiModelProperty(value = "")
 
-  public String getCode() {
-    return code;
+  public Invite getInvite() {
+    return invite;
   }
 
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setInvite(Invite invite) {
+    this.invite = invite;
   }
 
 
@@ -65,20 +66,20 @@ public class AcceptInviteRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AcceptInviteRequest acceptInviteRequest = (AcceptInviteRequest) o;
-    return Objects.equals(this.code, acceptInviteRequest.code);
+    DeleteInviteResponse deleteInviteResponse = (DeleteInviteResponse) o;
+    return Objects.equals(this.invite, deleteInviteResponse.invite);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code);
+    return Objects.hash(invite);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AcceptInviteRequest {\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("class DeleteInviteResponse {\n");
+    sb.append("    invite: ").append(toIndentedString(invite)).append("\n");
     sb.append("}");
     return sb.toString();
   }

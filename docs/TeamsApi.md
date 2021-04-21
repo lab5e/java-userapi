@@ -4,25 +4,25 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userAcceptInvite**](TeamsApi.md#userAcceptInvite) | **POST** /user/teams/accept | Accept invite
-[**userCreateTeam**](TeamsApi.md#userCreateTeam) | **POST** /user/teams | Create team
-[**userDeleteInvite**](TeamsApi.md#userDeleteInvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
-[**userDeleteMember**](TeamsApi.md#userDeleteMember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
-[**userDeleteTeam**](TeamsApi.md#userDeleteTeam) | **DELETE** /user/teams/{teamId} | Remove team
-[**userGenerateInvite**](TeamsApi.md#userGenerateInvite) | **POST** /user/teams/{teamId}/invites | Generate invite
-[**userListInvites**](TeamsApi.md#userListInvites) | **GET** /user/teams/{teamId}/invites | List invites
-[**userListTeams**](TeamsApi.md#userListTeams) | **GET** /user/teams | List teams
-[**userRetrieveInvite**](TeamsApi.md#userRetrieveInvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
-[**userRetrieveMember**](TeamsApi.md#userRetrieveMember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
-[**userRetrieveTeam**](TeamsApi.md#userRetrieveTeam) | **GET** /user/teams/{teamId} | Retrieve team
-[**userRetrieveTeamMembers**](TeamsApi.md#userRetrieveTeamMembers) | **GET** /user/teams/{teamId}/members | List members
-[**userUpdateMember**](TeamsApi.md#userUpdateMember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
-[**userUpdateTeam**](TeamsApi.md#userUpdateTeam) | **PATCH** /user/teams/{teamId} | Update team
+[**acceptInvite**](TeamsApi.md#acceptInvite) | **POST** /user/teams/accept | Accept invite
+[**createTeam**](TeamsApi.md#createTeam) | **POST** /user/teams | Create team
+[**deleteInvite**](TeamsApi.md#deleteInvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
+[**deleteMember**](TeamsApi.md#deleteMember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
+[**deleteTeam**](TeamsApi.md#deleteTeam) | **DELETE** /user/teams/{teamId} | Remove team
+[**generateInvite**](TeamsApi.md#generateInvite) | **POST** /user/teams/{teamId}/invites | Generate invite
+[**listInvites**](TeamsApi.md#listInvites) | **GET** /user/teams/{teamId}/invites | List invites
+[**listTeams**](TeamsApi.md#listTeams) | **GET** /user/teams | List teams
+[**retrieveInvite**](TeamsApi.md#retrieveInvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
+[**retrieveMember**](TeamsApi.md#retrieveMember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
+[**retrieveTeam**](TeamsApi.md#retrieveTeam) | **GET** /user/teams/{teamId} | Retrieve team
+[**retrieveTeamMembers**](TeamsApi.md#retrieveTeamMembers) | **GET** /user/teams/{teamId}/members | List members
+[**updateMember**](TeamsApi.md#updateMember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
+[**updateTeam**](TeamsApi.md#updateTeam) | **PATCH** /user/teams/{teamId} | Update team
 
 
-<a name="userAcceptInvite"></a>
-# **userAcceptInvite**
-> Team userAcceptInvite(body)
+<a name="acceptInvite"></a>
+# **acceptInvite**
+> Team acceptInvite(body)
 
 Accept invite
 
@@ -52,10 +52,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     AcceptInviteRequest body = new AcceptInviteRequest(); // AcceptInviteRequest | 
     try {
-      Team result = apiInstance.userAcceptInvite(body);
+      Team result = apiInstance.acceptInvite(body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userAcceptInvite");
+      System.err.println("Exception when calling TeamsApi#acceptInvite");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -96,9 +96,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userCreateTeam"></a>
-# **userCreateTeam**
-> Team userCreateTeam(body)
+<a name="createTeam"></a>
+# **createTeam**
+> Team createTeam(body)
 
 Create team
 
@@ -126,10 +126,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     Team body = new Team(); // Team | 
     try {
-      Team result = apiInstance.userCreateTeam(body);
+      Team result = apiInstance.createTeam(body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userCreateTeam");
+      System.err.println("Exception when calling TeamsApi#createTeam");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -170,9 +170,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userDeleteInvite"></a>
-# **userDeleteInvite**
-> Object userDeleteInvite(teamId, code)
+<a name="deleteInvite"></a>
+# **deleteInvite**
+> DeleteInviteResponse deleteInvite(teamId, code)
 
 Delete invite
 
@@ -203,10 +203,10 @@ public class Example {
     String teamId = "teamId_example"; // String | The team ID
     String code = "code_example"; // String | The invite code.
     try {
-      Object result = apiInstance.userDeleteInvite(teamId, code);
+      DeleteInviteResponse result = apiInstance.deleteInvite(teamId, code);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userDeleteInvite");
+      System.err.println("Exception when calling TeamsApi#deleteInvite");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeleteInviteResponse**](DeleteInviteResponse.md)
 
 ### Authorization
 
@@ -248,9 +248,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userDeleteMember"></a>
-# **userDeleteMember**
-> Member userDeleteMember(teamId, userId)
+<a name="deleteMember"></a>
+# **deleteMember**
+> Member deleteMember(teamId, userId)
 
 Remove member
 
@@ -281,10 +281,10 @@ public class Example {
     String teamId = "teamId_example"; // String | The team ID
     String userId = "userId_example"; // String | The user ID
     try {
-      Member result = apiInstance.userDeleteMember(teamId, userId);
+      Member result = apiInstance.deleteMember(teamId, userId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userDeleteMember");
+      System.err.println("Exception when calling TeamsApi#deleteMember");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -326,9 +326,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userDeleteTeam"></a>
-# **userDeleteTeam**
-> Team userDeleteTeam(teamId)
+<a name="deleteTeam"></a>
+# **deleteTeam**
+> Team deleteTeam(teamId)
 
 Remove team
 
@@ -358,10 +358,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | The team ID
     try {
-      Team result = apiInstance.userDeleteTeam(teamId);
+      Team result = apiInstance.deleteTeam(teamId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userDeleteTeam");
+      System.err.println("Exception when calling TeamsApi#deleteTeam");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -402,9 +402,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userGenerateInvite"></a>
-# **userGenerateInvite**
-> Invite userGenerateInvite(teamId, body)
+<a name="generateInvite"></a>
+# **generateInvite**
+> Invite generateInvite(teamId, body)
 
 Generate invite
 
@@ -435,10 +435,10 @@ public class Example {
     String teamId = "teamId_example"; // String | The team ID
     InviteRequest body = new InviteRequest(); // InviteRequest | 
     try {
-      Invite result = apiInstance.userGenerateInvite(teamId, body);
+      Invite result = apiInstance.generateInvite(teamId, body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userGenerateInvite");
+      System.err.println("Exception when calling TeamsApi#generateInvite");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -480,9 +480,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userListInvites"></a>
-# **userListInvites**
-> InviteList userListInvites(teamId)
+<a name="listInvites"></a>
+# **listInvites**
+> InviteList listInvites(teamId)
 
 List invites
 
@@ -512,10 +512,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | The team ID
     try {
-      InviteList result = apiInstance.userListInvites(teamId);
+      InviteList result = apiInstance.listInvites(teamId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userListInvites");
+      System.err.println("Exception when calling TeamsApi#listInvites");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -556,9 +556,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userListTeams"></a>
-# **userListTeams**
-> TeamList userListTeams()
+<a name="listTeams"></a>
+# **listTeams**
+> TeamList listTeams()
 
 List teams
 
@@ -587,10 +587,10 @@ public class Example {
 
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     try {
-      TeamList result = apiInstance.userListTeams();
+      TeamList result = apiInstance.listTeams();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userListTeams");
+      System.err.println("Exception when calling TeamsApi#listTeams");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -628,9 +628,9 @@ This endpoint does not need any parameter.
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userRetrieveInvite"></a>
-# **userRetrieveInvite**
-> Invite userRetrieveInvite(teamId, code)
+<a name="retrieveInvite"></a>
+# **retrieveInvite**
+> Invite retrieveInvite(teamId, code)
 
 Retrieve invite
 
@@ -661,10 +661,10 @@ public class Example {
     String teamId = "teamId_example"; // String | The team ID
     String code = "code_example"; // String | The invite code.
     try {
-      Invite result = apiInstance.userRetrieveInvite(teamId, code);
+      Invite result = apiInstance.retrieveInvite(teamId, code);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userRetrieveInvite");
+      System.err.println("Exception when calling TeamsApi#retrieveInvite");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -706,9 +706,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userRetrieveMember"></a>
-# **userRetrieveMember**
-> Member userRetrieveMember(teamId, userId)
+<a name="retrieveMember"></a>
+# **retrieveMember**
+> Member retrieveMember(teamId, userId)
 
 Retrieve member
 
@@ -737,10 +737,10 @@ public class Example {
     String teamId = "teamId_example"; // String | The team ID
     String userId = "userId_example"; // String | The user ID
     try {
-      Member result = apiInstance.userRetrieveMember(teamId, userId);
+      Member result = apiInstance.retrieveMember(teamId, userId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userRetrieveMember");
+      System.err.println("Exception when calling TeamsApi#retrieveMember");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -782,9 +782,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userRetrieveTeam"></a>
-# **userRetrieveTeam**
-> Team userRetrieveTeam(teamId)
+<a name="retrieveTeam"></a>
+# **retrieveTeam**
+> Team retrieveTeam(teamId)
 
 Retrieve team
 
@@ -812,10 +812,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | The team ID
     try {
-      Team result = apiInstance.userRetrieveTeam(teamId);
+      Team result = apiInstance.retrieveTeam(teamId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userRetrieveTeam");
+      System.err.println("Exception when calling TeamsApi#retrieveTeam");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -856,9 +856,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userRetrieveTeamMembers"></a>
-# **userRetrieveTeamMembers**
-> MemberList userRetrieveTeamMembers(teamId)
+<a name="retrieveTeamMembers"></a>
+# **retrieveTeamMembers**
+> MemberList retrieveTeamMembers(teamId)
 
 List members
 
@@ -886,10 +886,10 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | The team ID
     try {
-      MemberList result = apiInstance.userRetrieveTeamMembers(teamId);
+      MemberList result = apiInstance.retrieveTeamMembers(teamId);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userRetrieveTeamMembers");
+      System.err.println("Exception when calling TeamsApi#retrieveTeamMembers");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -930,9 +930,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userUpdateMember"></a>
-# **userUpdateMember**
-> Member userUpdateMember(teamId, userId, body)
+<a name="updateMember"></a>
+# **updateMember**
+> Member updateMember(teamId, userId, body)
 
 Update member
 
@@ -964,10 +964,10 @@ public class Example {
     String userId = "userId_example"; // String | 
     Member body = new Member(); // Member | 
     try {
-      Member result = apiInstance.userUpdateMember(teamId, userId, body);
+      Member result = apiInstance.updateMember(teamId, userId, body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userUpdateMember");
+      System.err.println("Exception when calling TeamsApi#updateMember");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1010,9 +1010,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userUpdateTeam"></a>
-# **userUpdateTeam**
-> Team userUpdateTeam(teamId, body)
+<a name="updateTeam"></a>
+# **updateTeam**
+> Team updateTeam(teamId, body)
 
 Update team
 
@@ -1043,10 +1043,10 @@ public class Example {
     String teamId = "teamId_example"; // String | 
     Team body = new Team(); // Team | 
     try {
-      Team result = apiInstance.userUpdateTeam(teamId, body);
+      Team result = apiInstance.updateTeam(teamId, body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TeamsApi#userUpdateTeam");
+      System.err.println("Exception when calling TeamsApi#updateTeam");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

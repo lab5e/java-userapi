@@ -4,16 +4,16 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userCreateToken**](TokensApi.md#userCreateToken) | **POST** /user/tokens | Create token
-[**userDeleteToken**](TokensApi.md#userDeleteToken) | **DELETE** /user/tokens/{token} | Remove token
-[**userListTokens**](TokensApi.md#userListTokens) | **GET** /user/tokens | List tokens
-[**userRetrieveToken**](TokensApi.md#userRetrieveToken) | **GET** /user/tokens/{token} | Retrieve token
-[**userUpdateToken**](TokensApi.md#userUpdateToken) | **PATCH** /user/tokens/{token} | Update token
+[**createToken**](TokensApi.md#createToken) | **POST** /user/tokens | Create token
+[**deleteToken**](TokensApi.md#deleteToken) | **DELETE** /user/tokens/{token} | Remove token
+[**listTokens**](TokensApi.md#listTokens) | **GET** /user/tokens | List tokens
+[**retrieveToken**](TokensApi.md#retrieveToken) | **GET** /user/tokens/{token} | Retrieve token
+[**updateToken**](TokensApi.md#updateToken) | **PATCH** /user/tokens/{token} | Update token
 
 
-<a name="userCreateToken"></a>
-# **userCreateToken**
-> Token userCreateToken(body)
+<a name="createToken"></a>
+# **createToken**
+> Token createToken(body)
 
 Create token
 
@@ -41,10 +41,10 @@ public class Example {
     TokensApi apiInstance = new TokensApi(defaultClient);
     Token body = new Token(); // Token | 
     try {
-      Token result = apiInstance.userCreateToken(body);
+      Token result = apiInstance.createToken(body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TokensApi#userCreateToken");
+      System.err.println("Exception when calling TokensApi#createToken");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -85,9 +85,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userDeleteToken"></a>
-# **userDeleteToken**
-> Object userDeleteToken(token)
+<a name="deleteToken"></a>
+# **deleteToken**
+> DeleteTokenResponse deleteToken(token)
 
 Remove token
 
@@ -115,10 +115,10 @@ public class Example {
     TokensApi apiInstance = new TokensApi(defaultClient);
     String token = "token_example"; // String | The token to delete.
     try {
-      Object result = apiInstance.userDeleteToken(token);
+      DeleteTokenResponse result = apiInstance.deleteToken(token);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TokensApi#userDeleteToken");
+      System.err.println("Exception when calling TokensApi#deleteToken");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -136,7 +136,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**DeleteTokenResponse**](DeleteTokenResponse.md)
 
 ### Authorization
 
@@ -159,9 +159,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userListTokens"></a>
-# **userListTokens**
-> TokenList userListTokens()
+<a name="listTokens"></a>
+# **listTokens**
+> TokenList listTokens()
 
 List tokens
 
@@ -188,10 +188,10 @@ public class Example {
 
     TokensApi apiInstance = new TokensApi(defaultClient);
     try {
-      TokenList result = apiInstance.userListTokens();
+      TokenList result = apiInstance.listTokens();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TokensApi#userListTokens");
+      System.err.println("Exception when calling TokensApi#listTokens");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -229,9 +229,9 @@ This endpoint does not need any parameter.
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userRetrieveToken"></a>
-# **userRetrieveToken**
-> Token userRetrieveToken(token)
+<a name="retrieveToken"></a>
+# **retrieveToken**
+> Token retrieveToken(token)
 
 Retrieve token
 
@@ -259,10 +259,10 @@ public class Example {
     TokensApi apiInstance = new TokensApi(defaultClient);
     String token = "token_example"; // String | 
     try {
-      Token result = apiInstance.userRetrieveToken(token);
+      Token result = apiInstance.retrieveToken(token);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TokensApi#userRetrieveToken");
+      System.err.println("Exception when calling TokensApi#retrieveToken");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -303,9 +303,9 @@ Name | Type | Description  | Notes
 **500** | I&#39;m sorry. We are broken |  -  |
 **0** | An unexpected error response. |  -  |
 
-<a name="userUpdateToken"></a>
-# **userUpdateToken**
-> Token userUpdateToken(token, body)
+<a name="updateToken"></a>
+# **updateToken**
+> Token updateToken(token, body)
 
 Update token
 
@@ -334,10 +334,10 @@ public class Example {
     String token = "token_example"; // String | The token  Use this in the `X-API-Token` header when using the API.
     Token body = new Token(); // Token | 
     try {
-      Token result = apiInstance.userUpdateToken(token, body);
+      Token result = apiInstance.updateToken(token, body);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TokensApi#userUpdateToken");
+      System.err.println("Exception when calling TokensApi#updateToken");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

@@ -4,12 +4,12 @@ All URIs are relative to *https://api.lab5e.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**userGetUserProfile**](ProfileApi.md#userGetUserProfile) | **GET** /user/profile | Logged in profile
+[**getUserProfile**](ProfileApi.md#getUserProfile) | **GET** /user/profile | Logged in profile
 
 
-<a name="userGetUserProfile"></a>
-# **userGetUserProfile**
-> UserProfile userGetUserProfile()
+<a name="getUserProfile"></a>
+# **getUserProfile**
+> UserProfile getUserProfile()
 
 Logged in profile
 
@@ -38,10 +38,10 @@ public class Example {
 
     ProfileApi apiInstance = new ProfileApi(defaultClient);
     try {
-      UserProfile result = apiInstance.userGetUserProfile();
+      UserProfile result = apiInstance.getUserProfile();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ProfileApi#userGetUserProfile");
+      System.err.println("Exception when calling ProfileApi#getUserProfile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

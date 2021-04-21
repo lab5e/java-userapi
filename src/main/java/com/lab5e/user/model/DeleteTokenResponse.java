@@ -20,40 +20,41 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.lab5e.user.model.Token;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * AcceptInviteRequest
+ * DeleteTokenResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2021-04-21T11:56:07.327Z[GMT]")
-public class AcceptInviteRequest {
-  public static final String SERIALIZED_NAME_CODE = "code";
-  @SerializedName(SERIALIZED_NAME_CODE)
-  private String code;
+public class DeleteTokenResponse {
+  public static final String SERIALIZED_NAME_TOKEN = "token";
+  @SerializedName(SERIALIZED_NAME_TOKEN)
+  private Token token;
 
 
-  public AcceptInviteRequest code(String code) {
+  public DeleteTokenResponse token(Token token) {
     
-    this.code = code;
+    this.token = token;
     return this;
   }
 
    /**
-   * The invite code to use.
-   * @return code
+   * Get token
+   * @return token
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "The invite code to use.")
+  @ApiModelProperty(value = "")
 
-  public String getCode() {
-    return code;
+  public Token getToken() {
+    return token;
   }
 
 
-  public void setCode(String code) {
-    this.code = code;
+  public void setToken(Token token) {
+    this.token = token;
   }
 
 
@@ -65,20 +66,20 @@ public class AcceptInviteRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AcceptInviteRequest acceptInviteRequest = (AcceptInviteRequest) o;
-    return Objects.equals(this.code, acceptInviteRequest.code);
+    DeleteTokenResponse deleteTokenResponse = (DeleteTokenResponse) o;
+    return Objects.equals(this.token, deleteTokenResponse.token);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(code);
+    return Objects.hash(token);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AcceptInviteRequest {\n");
-    sb.append("    code: ").append(toIndentedString(code)).append("\n");
+    sb.append("class DeleteTokenResponse {\n");
+    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("}");
     return sb.toString();
   }

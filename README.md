@@ -1,8 +1,8 @@
 # user-java-client
 
 The User API
-- API version: 1.3.5 everlasting-ashanti
-  - Build date: 2021-04-14T16:09:51.502Z[GMT]
+- API version: 1.3.5 medium-hadley
+  - Build date: 2021-04-21T11:56:07.327Z[GMT]
 
 API to manage teams, members and tokens
 
@@ -94,10 +94,10 @@ public class Example {
 
     ProfileApi apiInstance = new ProfileApi(defaultClient);
     try {
-      UserProfile result = apiInstance.userGetUserProfile();
+      UserProfile result = apiInstance.getUserProfile();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling ProfileApi#userGetUserProfile");
+      System.err.println("Exception when calling ProfileApi#getUserProfile");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -114,31 +114,33 @@ All URIs are relative to *https://api.lab5e.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*ProfileApi* | [**userGetUserProfile**](docs/ProfileApi.md#userGetUserProfile) | **GET** /user/profile | Logged in profile
-*TeamsApi* | [**userAcceptInvite**](docs/TeamsApi.md#userAcceptInvite) | **POST** /user/teams/accept | Accept invite
-*TeamsApi* | [**userCreateTeam**](docs/TeamsApi.md#userCreateTeam) | **POST** /user/teams | Create team
-*TeamsApi* | [**userDeleteInvite**](docs/TeamsApi.md#userDeleteInvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
-*TeamsApi* | [**userDeleteMember**](docs/TeamsApi.md#userDeleteMember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
-*TeamsApi* | [**userDeleteTeam**](docs/TeamsApi.md#userDeleteTeam) | **DELETE** /user/teams/{teamId} | Remove team
-*TeamsApi* | [**userGenerateInvite**](docs/TeamsApi.md#userGenerateInvite) | **POST** /user/teams/{teamId}/invites | Generate invite
-*TeamsApi* | [**userListInvites**](docs/TeamsApi.md#userListInvites) | **GET** /user/teams/{teamId}/invites | List invites
-*TeamsApi* | [**userListTeams**](docs/TeamsApi.md#userListTeams) | **GET** /user/teams | List teams
-*TeamsApi* | [**userRetrieveInvite**](docs/TeamsApi.md#userRetrieveInvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
-*TeamsApi* | [**userRetrieveMember**](docs/TeamsApi.md#userRetrieveMember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
-*TeamsApi* | [**userRetrieveTeam**](docs/TeamsApi.md#userRetrieveTeam) | **GET** /user/teams/{teamId} | Retrieve team
-*TeamsApi* | [**userRetrieveTeamMembers**](docs/TeamsApi.md#userRetrieveTeamMembers) | **GET** /user/teams/{teamId}/members | List members
-*TeamsApi* | [**userUpdateMember**](docs/TeamsApi.md#userUpdateMember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
-*TeamsApi* | [**userUpdateTeam**](docs/TeamsApi.md#userUpdateTeam) | **PATCH** /user/teams/{teamId} | Update team
-*TokensApi* | [**userCreateToken**](docs/TokensApi.md#userCreateToken) | **POST** /user/tokens | Create token
-*TokensApi* | [**userDeleteToken**](docs/TokensApi.md#userDeleteToken) | **DELETE** /user/tokens/{token} | Remove token
-*TokensApi* | [**userListTokens**](docs/TokensApi.md#userListTokens) | **GET** /user/tokens | List tokens
-*TokensApi* | [**userRetrieveToken**](docs/TokensApi.md#userRetrieveToken) | **GET** /user/tokens/{token} | Retrieve token
-*TokensApi* | [**userUpdateToken**](docs/TokensApi.md#userUpdateToken) | **PATCH** /user/tokens/{token} | Update token
+*ProfileApi* | [**getUserProfile**](docs/ProfileApi.md#getUserProfile) | **GET** /user/profile | Logged in profile
+*TeamsApi* | [**acceptInvite**](docs/TeamsApi.md#acceptInvite) | **POST** /user/teams/accept | Accept invite
+*TeamsApi* | [**createTeam**](docs/TeamsApi.md#createTeam) | **POST** /user/teams | Create team
+*TeamsApi* | [**deleteInvite**](docs/TeamsApi.md#deleteInvite) | **DELETE** /user/teams/{teamId}/invites/{code} | Delete invite
+*TeamsApi* | [**deleteMember**](docs/TeamsApi.md#deleteMember) | **DELETE** /user/teams/{teamId}/members/{userId} | Remove member
+*TeamsApi* | [**deleteTeam**](docs/TeamsApi.md#deleteTeam) | **DELETE** /user/teams/{teamId} | Remove team
+*TeamsApi* | [**generateInvite**](docs/TeamsApi.md#generateInvite) | **POST** /user/teams/{teamId}/invites | Generate invite
+*TeamsApi* | [**listInvites**](docs/TeamsApi.md#listInvites) | **GET** /user/teams/{teamId}/invites | List invites
+*TeamsApi* | [**listTeams**](docs/TeamsApi.md#listTeams) | **GET** /user/teams | List teams
+*TeamsApi* | [**retrieveInvite**](docs/TeamsApi.md#retrieveInvite) | **GET** /user/teams/{teamId}/invites/{code} | Retrieve invite
+*TeamsApi* | [**retrieveMember**](docs/TeamsApi.md#retrieveMember) | **GET** /user/teams/{teamId}/members/{userId} | Retrieve member
+*TeamsApi* | [**retrieveTeam**](docs/TeamsApi.md#retrieveTeam) | **GET** /user/teams/{teamId} | Retrieve team
+*TeamsApi* | [**retrieveTeamMembers**](docs/TeamsApi.md#retrieveTeamMembers) | **GET** /user/teams/{teamId}/members | List members
+*TeamsApi* | [**updateMember**](docs/TeamsApi.md#updateMember) | **PATCH** /user/teams/{teamId}/members/{userId} | Update member
+*TeamsApi* | [**updateTeam**](docs/TeamsApi.md#updateTeam) | **PATCH** /user/teams/{teamId} | Update team
+*TokensApi* | [**createToken**](docs/TokensApi.md#createToken) | **POST** /user/tokens | Create token
+*TokensApi* | [**deleteToken**](docs/TokensApi.md#deleteToken) | **DELETE** /user/tokens/{token} | Remove token
+*TokensApi* | [**listTokens**](docs/TokensApi.md#listTokens) | **GET** /user/tokens | List tokens
+*TokensApi* | [**retrieveToken**](docs/TokensApi.md#retrieveToken) | **GET** /user/tokens/{token} | Retrieve token
+*TokensApi* | [**updateToken**](docs/TokensApi.md#updateToken) | **PATCH** /user/tokens/{token} | Update token
 
 
 ## Documentation for Models
 
  - [AcceptInviteRequest](docs/AcceptInviteRequest.md)
+ - [DeleteInviteResponse](docs/DeleteInviteResponse.md)
+ - [DeleteTokenResponse](docs/DeleteTokenResponse.md)
  - [Invite](docs/Invite.md)
  - [InviteList](docs/InviteList.md)
  - [InviteRequest](docs/InviteRequest.md)

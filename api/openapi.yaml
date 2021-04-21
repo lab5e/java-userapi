@@ -6,7 +6,7 @@ info:
     url: https://docs.lab5e.com
   description: API to manage teams, members and tokens
   title: The User API
-  version: 1.3.5 everlasting-ashanti
+  version: 1.3.5 medium-hadley
 servers:
 - url: https://api.lab5e.com/
 security:
@@ -17,7 +17,7 @@ paths:
   /user/profile:
     get:
       description: Show your user profile information
-      operationId: User_GetUserProfile
+      operationId: GetUserProfile
       responses:
         "200":
           content:
@@ -75,7 +75,7 @@ paths:
     get:
       description: Update the team. You must be an administrator of the team to edit
         it.
-      operationId: User_ListTeams
+      operationId: ListTeams
       responses:
         "200":
           content:
@@ -130,7 +130,7 @@ paths:
       - teams
       x-accepts: application/json
     post:
-      operationId: User_CreateTeam
+      operationId: CreateTeam
       requestBody:
         content:
           application/json:
@@ -197,7 +197,7 @@ paths:
       description: Accept an invite from another user. This will add the currently
         logged in user to the team as a regular memeber. When the invite is accepted
         it is removed from the team's invites and cannot be reused.
-      operationId: User_AcceptInvite
+      operationId: AcceptInvite
       requestBody:
         content:
           application/json:
@@ -263,7 +263,7 @@ paths:
     delete:
       description: Update the team. You must be an administrator of the team to edit
         it.
-      operationId: User_DeleteTeam
+      operationId: DeleteTeam
       parameters:
       - description: The team ID
         in: path
@@ -325,7 +325,7 @@ paths:
       - teams
       x-accepts: application/json
     get:
-      operationId: User_RetrieveTeam
+      operationId: RetrieveTeam
       parameters:
       - description: The team ID
         in: path
@@ -389,7 +389,7 @@ paths:
     patch:
       description: Update the team. You must be an administrator of the team to edit
         it.
-      operationId: User_UpdateTeam
+      operationId: UpdateTeam
       parameters:
       - in: path
         name: teamId
@@ -461,7 +461,7 @@ paths:
     get:
       description: Update the team. You must be an administrator of the team to edit
         it.
-      operationId: User_ListInvites
+      operationId: ListInvites
       parameters:
       - description: The team ID
         in: path
@@ -525,7 +525,7 @@ paths:
     post:
       description: Update the team. You must be an administrator of the team to edit
         it.
-      operationId: User_GenerateInvite
+      operationId: GenerateInvite
       parameters:
       - description: The team ID
         in: path
@@ -598,7 +598,7 @@ paths:
     delete:
       description: Delete an invite created earlier. You must be an administrator
         of the team to perform this action
-      operationId: User_DeleteInvite
+      operationId: DeleteInvite
       parameters:
       - description: The team ID
         in: path
@@ -667,7 +667,7 @@ paths:
       x-accepts: application/json
     get:
       description: Read a single invite from the team's set of non-redeemed invites.
-      operationId: User_RetrieveInvite
+      operationId: RetrieveInvite
       parameters:
       - description: The team ID
         in: path
@@ -736,7 +736,7 @@ paths:
       x-accepts: application/json
   /user/teams/{teamId}/members:
     get:
-      operationId: User_RetrieveTeamMembers
+      operationId: RetrieveTeamMembers
       parameters:
       - description: The team ID
         in: path
@@ -801,7 +801,7 @@ paths:
     delete:
       description: Remove a member from the team. You must be an administrator to
         do this. You can't remove yourself from the team.
-      operationId: User_DeleteMember
+      operationId: DeleteMember
       parameters:
       - description: The team ID
         in: path
@@ -869,7 +869,7 @@ paths:
       - teams
       x-accepts: application/json
     get:
-      operationId: User_RetrieveMember
+      operationId: RetrieveMember
       parameters:
       - description: The team ID
         in: path
@@ -938,7 +938,7 @@ paths:
       x-accepts: application/json
     patch:
       description: You must be an administrator of the team to update member settings
-      operationId: User_UpdateMember
+      operationId: UpdateMember
       parameters:
       - in: path
         name: teamId
@@ -1013,7 +1013,7 @@ paths:
       x-accepts: application/json
   /user/tokens:
     get:
-      operationId: User_ListTokens
+      operationId: ListTokens
       responses:
         "200":
           content:
@@ -1068,7 +1068,7 @@ paths:
       - tokens
       x-accepts: application/json
     post:
-      operationId: User_CreateToken
+      operationId: CreateToken
       requestBody:
         content:
           application/json:
@@ -1132,7 +1132,7 @@ paths:
       x-accepts: application/json
   /user/tokens/{token}:
     delete:
-      operationId: User_DeleteToken
+      operationId: DeleteToken
       parameters:
       - description: The token to delete.
         in: path
@@ -1194,7 +1194,7 @@ paths:
       - tokens
       x-accepts: application/json
     get:
-      operationId: User_RetrieveToken
+      operationId: RetrieveToken
       parameters:
       - in: path
         name: token
@@ -1255,7 +1255,7 @@ paths:
       - tokens
       x-accepts: application/json
     patch:
-      operationId: User_UpdateToken
+      operationId: UpdateToken
       parameters:
       - description: |-
           The token
@@ -1339,9 +1339,28 @@ components:
       title: Accept an invite
       type: object
     DeleteInviteResponse:
+      example:
+        invite:
+          createdAt: createdAt
+          code: code
+      properties:
+        invite:
+          $ref: '#/components/schemas/Invite'
       title: Remove invite response
       type: object
     DeleteTokenResponse:
+      example:
+        token:
+          lastUse: lastUse
+          resource: resource
+          uses: uses
+          write: true
+          token: token
+          tags:
+            key: tags
+      properties:
+        token:
+          $ref: '#/components/schemas/Token'
       title: Remove token response
       type: object
     Invite:
