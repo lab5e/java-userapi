@@ -5,7 +5,7 @@
     <artifactId>user-java-client</artifactId>
     <packaging>jar</packaging>
     <name>user-java-client</name>
-    <version>1.3.5</version>
+    <version>1.3.6</version>
     <url>https://github.com/lab5e/java-userapi</url>
     <description>User API Client</description>
     <scm>
@@ -25,7 +25,7 @@
     <developers>
         <developer>
             <name>Lab5e</name>
-            <email>clients@lab5e.com</email>
+            <email>releases@lab5e.com</email>
             <organization>Lab5e.com</organization>
             <organizationUrl>https://lab5e.com</organizationUrl>
         </developer>
