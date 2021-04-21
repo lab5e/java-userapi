@@ -24,7 +24,7 @@ public class ProfileDemo {
         try {
             // This will retrieve the profile. If there's an error retrieving
             // the profile an ApiException is thrown.
-            final UserProfile profile = profileApi.userGetUserProfile();
+            final UserProfile profile = profileApi.getUserProfile();
 
             // Finally - print the profile
             System.out.println("Your profile");
