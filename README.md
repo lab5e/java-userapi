@@ -1,8 +1,8 @@
 # user-java-client
 
 The User API
-- API version: 1.3.8 indivisible-esau
-  - Build date: 2021-04-25T10:14:00.810Z[GMT]
+- API version: 1.3.9 cumulative-hardin
+  - Build date: 2021-04-28T21:38:40.999Z[GMT]
 
 API to manage teams, members and tokens
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.lab5e</groupId>
   <artifactId>user-java-client</artifactId>
-  <version>1.3.8</version>
+  <version>1.3.9</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.lab5e:user-java-client:1.3.8"
+compile "com.lab5e:user-java-client:1.3.9"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/user-java-client-1.3.8.jar`
+* `target/user-java-client-1.3.9.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
