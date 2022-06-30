@@ -25,25 +25,89 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
- * MemberList
+ * ATeam
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-30T09:16:22.625Z[GMT]")
-public class MemberList {
+public class ATeam {
+  public static final String SERIALIZED_NAME_IS_PRIVATE = "isPrivate";
+  @SerializedName(SERIALIZED_NAME_IS_PRIVATE)
+  private Boolean isPrivate;
+
+  public static final String SERIALIZED_NAME_TAGS = "tags";
+  @SerializedName(SERIALIZED_NAME_TAGS)
+  private Map<String, String> tags = null;
+
   public static final String SERIALIZED_NAME_MEMBERS = "members";
   @SerializedName(SERIALIZED_NAME_MEMBERS)
   private List<Member> members = null;
 
 
-  public MemberList members(List<Member> members) {
+  public ATeam isPrivate(Boolean isPrivate) {
+    
+    this.isPrivate = isPrivate;
+    return this;
+  }
+
+   /**
+   * Get isPrivate
+   * @return isPrivate
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Boolean getIsPrivate() {
+    return isPrivate;
+  }
+
+
+  public void setIsPrivate(Boolean isPrivate) {
+    this.isPrivate = isPrivate;
+  }
+
+
+  public ATeam tags(Map<String, String> tags) {
+    
+    this.tags = tags;
+    return this;
+  }
+
+  public ATeam putTagsItem(String key, String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new HashMap<>();
+    }
+    this.tags.put(key, tagsItem);
+    return this;
+  }
+
+   /**
+   * Get tags
+   * @return tags
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public Map<String, String> getTags() {
+    return tags;
+  }
+
+
+  public void setTags(Map<String, String> tags) {
+    this.tags = tags;
+  }
+
+
+  public ATeam members(List<Member> members) {
     
     this.members = members;
     return this;
   }
 
-  public MemberList addMembersItem(Member membersItem) {
+  public ATeam addMembersItem(Member membersItem) {
     if (this.members == null) {
       this.members = new ArrayList<>();
     }
@@ -76,19 +140,23 @@ public class MemberList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MemberList memberList = (MemberList) o;
-    return Objects.equals(this.members, memberList.members);
+    ATeam aTeam = (ATeam) o;
+    return Objects.equals(this.isPrivate, aTeam.isPrivate) &&
+        Objects.equals(this.tags, aTeam.tags) &&
+        Objects.equals(this.members, aTeam.members);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(members);
+    return Objects.hash(isPrivate, tags, members);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MemberList {\n");
+    sb.append("class ATeam {\n");
+    sb.append("    isPrivate: ").append(toIndentedString(isPrivate)).append("\n");
+    sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("    members: ").append(toIndentedString(members)).append("\n");
     sb.append("}");
     return sb.toString();

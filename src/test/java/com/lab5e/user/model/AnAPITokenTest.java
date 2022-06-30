@@ -18,37 +18,69 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.lab5e.user.model.Team;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import org.junit.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
 
 
 /**
- * Model tests for TeamList
+ * Model tests for AnAPIToken
  */
-public class TeamListTest {
-    private final TeamList model = new TeamList();
+public class AnAPITokenTest {
+    private final AnAPIToken model = new AnAPIToken();
 
     /**
-     * Model tests for TeamList
+     * Model tests for AnAPIToken
      */
     @Test
-    public void testTeamList() {
-        // TODO: test TeamList
+    public void testAnAPIToken() {
+        // TODO: test AnAPIToken
     }
 
     /**
-     * Test the property 'teams'
+     * Test the property 'resource'
      */
     @Test
-    public void teamsTest() {
-        // TODO: test teams
+    public void resourceTest() {
+        // TODO: test resource
+    }
+
+    /**
+     * Test the property 'write'
+     */
+    @Test
+    public void writeTest() {
+        // TODO: test write
+    }
+
+    /**
+     * Test the property 'tags'
+     */
+    @Test
+    public void tagsTest() {
+        // TODO: test tags
+    }
+
+    /**
+     * Test the property 'lastUse'
+     */
+    @Test
+    public void lastUseTest() {
+        // TODO: test lastUse
+    }
+
+    /**
+     * Test the property 'uses'
+     */
+    @Test
+    public void usesTest() {
+        // TODO: test uses
     }
 
 }

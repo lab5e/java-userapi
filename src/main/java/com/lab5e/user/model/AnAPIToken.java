@@ -28,10 +28,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Token
+ * AnAPIToken
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-30T09:16:22.625Z[GMT]")
-public class Token {
+public class AnAPIToken {
   public static final String SERIALIZED_NAME_RESOURCE = "resource";
   @SerializedName(SERIALIZED_NAME_RESOURCE)
   private String resource;
@@ -39,10 +39,6 @@ public class Token {
   public static final String SERIALIZED_NAME_WRITE = "write";
   @SerializedName(SERIALIZED_NAME_WRITE)
   private Boolean write;
-
-  public static final String SERIALIZED_NAME_TOKEN = "token";
-  @SerializedName(SERIALIZED_NAME_TOKEN)
-  private String token;
 
   public static final String SERIALIZED_NAME_TAGS = "tags";
   @SerializedName(SERIALIZED_NAME_TAGS)
@@ -57,7 +53,7 @@ public class Token {
   private String uses;
 
 
-  public Token resource(String resource) {
+  public AnAPIToken resource(String resource) {
     
     this.resource = resource;
     return this;
@@ -80,7 +76,7 @@ public class Token {
   }
 
 
-  public Token write(Boolean write) {
+  public AnAPIToken write(Boolean write) {
     
     this.write = write;
     return this;
@@ -103,36 +99,13 @@ public class Token {
   }
 
 
-  public Token token(String token) {
-    
-    this.token = token;
-    return this;
-  }
-
-   /**
-   * Use this in the &#x60;X-API-Token&#x60; header when using the API.
-   * @return token
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "Use this in the `X-API-Token` header when using the API.")
-
-  public String getToken() {
-    return token;
-  }
-
-
-  public void setToken(String token) {
-    this.token = token;
-  }
-
-
-  public Token tags(Map<String, String> tags) {
+  public AnAPIToken tags(Map<String, String> tags) {
     
     this.tags = tags;
     return this;
   }
 
-  public Token putTagsItem(String key, String tagsItem) {
+  public AnAPIToken putTagsItem(String key, String tagsItem) {
     if (this.tags == null) {
       this.tags = new HashMap<>();
     }
@@ -157,7 +130,7 @@ public class Token {
   }
 
 
-  public Token lastUse(String lastUse) {
+  public AnAPIToken lastUse(String lastUse) {
     
     this.lastUse = lastUse;
     return this;
@@ -180,7 +153,7 @@ public class Token {
   }
 
 
-  public Token uses(String uses) {
+  public AnAPIToken uses(String uses) {
     
     this.uses = uses;
     return this;
@@ -211,27 +184,25 @@ public class Token {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Token token = (Token) o;
-    return Objects.equals(this.resource, token.resource) &&
-        Objects.equals(this.write, token.write) &&
-        Objects.equals(this.token, token.token) &&
-        Objects.equals(this.tags, token.tags) &&
-        Objects.equals(this.lastUse, token.lastUse) &&
-        Objects.equals(this.uses, token.uses);
+    AnAPIToken anAPIToken = (AnAPIToken) o;
+    return Objects.equals(this.resource, anAPIToken.resource) &&
+        Objects.equals(this.write, anAPIToken.write) &&
+        Objects.equals(this.tags, anAPIToken.tags) &&
+        Objects.equals(this.lastUse, anAPIToken.lastUse) &&
+        Objects.equals(this.uses, anAPIToken.uses);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(resource, write, token, tags, lastUse, uses);
+    return Objects.hash(resource, write, tags, lastUse, uses);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Token {\n");
+    sb.append("class AnAPIToken {\n");
     sb.append("    resource: ").append(toIndentedString(resource)).append("\n");
     sb.append("    write: ").append(toIndentedString(write)).append("\n");
-    sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
     sb.append("    lastUse: ").append(toIndentedString(lastUse)).append("\n");
     sb.append("    uses: ").append(toIndentedString(uses)).append("\n");

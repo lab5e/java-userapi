@@ -27,17 +27,17 @@ import org.junit.Test;
 
 
 /**
- * Model tests for AcceptInviteRequest
+ * Model tests for RequestInviteDetails
  */
-public class AcceptInviteRequestTest {
-    private final AcceptInviteRequest model = new AcceptInviteRequest();
+public class RequestInviteDetailsTest {
+    private final RequestInviteDetails model = new RequestInviteDetails();
 
     /**
-     * Model tests for AcceptInviteRequest
+     * Model tests for RequestInviteDetails
      */
     @Test
-    public void testAcceptInviteRequest() {
-        // TODO: test AcceptInviteRequest
+    public void testRequestInviteDetails() {
+        // TODO: test RequestInviteDetails
     }
 
     /**

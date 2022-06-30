@@ -1,13 +1,13 @@
 
 
-# ProtobufAny
+# RequestInviteDetails
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**atType** | **String** |  |  [optional]
+**code** | **String** | The invite code. |  [optional]
 
 
 

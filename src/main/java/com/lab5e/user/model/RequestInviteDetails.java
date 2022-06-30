@@ -20,52 +20,40 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
-import com.lab5e.user.model.Invite;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * List of active invites. Onece an invite has been redeemed it will be removed automatically. An administrator of the team can delete unused invites.
+ * RequestInviteDetails
  */
-@ApiModel(description = "List of active invites. Onece an invite has been redeemed it will be removed automatically. An administrator of the team can delete unused invites.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-06-30T09:16:22.625Z[GMT]")
-public class InviteList {
-  public static final String SERIALIZED_NAME_INVITES = "invites";
-  @SerializedName(SERIALIZED_NAME_INVITES)
-  private List<Invite> invites = null;
+public class RequestInviteDetails {
+  public static final String SERIALIZED_NAME_CODE = "code";
+  @SerializedName(SERIALIZED_NAME_CODE)
+  private String code;
 
 
-  public InviteList invites(List<Invite> invites) {
+  public RequestInviteDetails code(String code) {
     
-    this.invites = invites;
-    return this;
-  }
-
-  public InviteList addInvitesItem(Invite invitesItem) {
-    if (this.invites == null) {
-      this.invites = new ArrayList<>();
-    }
-    this.invites.add(invitesItem);
+    this.code = code;
     return this;
   }
 
    /**
-   * Get invites
-   * @return invites
+   * The invite code.
+   * @return code
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "The invite code.")
 
-  public List<Invite> getInvites() {
-    return invites;
+  public String getCode() {
+    return code;
   }
 
 
-  public void setInvites(List<Invite> invites) {
-    this.invites = invites;
+  public void setCode(String code) {
+    this.code = code;
   }
 
 
@@ -77,20 +65,20 @@ public class InviteList {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    InviteList inviteList = (InviteList) o;
-    return Objects.equals(this.invites, inviteList.invites);
+    RequestInviteDetails requestInviteDetails = (RequestInviteDetails) o;
+    return Objects.equals(this.code, requestInviteDetails.code);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(invites);
+    return Objects.hash(code);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class InviteList {\n");
-    sb.append("    invites: ").append(toIndentedString(invites)).append("\n");
+    sb.append("class RequestInviteDetails {\n");
+    sb.append("    code: ").append(toIndentedString(code)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -332,7 +332,7 @@ public class Example {
 
     TokensApi apiInstance = new TokensApi(defaultClient);
     String token = "token_example"; // String | The token  Use this in the `X-API-Token` header when using the API.
-    Token body = new Token(); // Token | 
+    AnAPIToken body = new AnAPIToken(); // AnAPIToken | 
     try {
       Token result = apiInstance.updateToken(token, body);
       System.out.println(result);
@@ -352,7 +352,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **token** | **String**| The token  Use this in the &#x60;X-API-Token&#x60; header when using the API. |
- **body** | [**Token**](Token.md)|  |
+ **body** | [**AnAPIToken**](AnAPIToken.md)|  |
 
 ### Return type
 

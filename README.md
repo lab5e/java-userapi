@@ -1,8 +1,8 @@
 # user-java-client
 
 The User API
-- API version: 1.3.11 lucky-fremont
-  - Build date: 2021-09-27T20:56:39.273Z[GMT]
+- API version: 1.3.13 bordering-jerilyn
+  - Build date: 2022-06-30T09:16:22.625Z[GMT]
 
 API to manage teams, members and tokens
 
@@ -41,7 +41,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>com.lab5e</groupId>
   <artifactId>user-java-client</artifactId>
-  <version>1.3.11</version>
+  <version>1.3.13</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,7 +51,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.lab5e:user-java-client:1.3.11"
+compile "com.lab5e:user-java-client:1.3.13"
 ```
 
 ### Others
@@ -64,7 +64,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/user-java-client-1.3.11.jar`
+* `target/user-java-client-1.3.13.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -138,15 +138,18 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [ATeam](docs/ATeam.md)
  - [AcceptInviteRequest](docs/AcceptInviteRequest.md)
+ - [AnAPIToken](docs/AnAPIToken.md)
  - [DeleteInviteResponse](docs/DeleteInviteResponse.md)
  - [DeleteTokenResponse](docs/DeleteTokenResponse.md)
  - [Invite](docs/Invite.md)
  - [InviteList](docs/InviteList.md)
- - [InviteRequest](docs/InviteRequest.md)
  - [Member](docs/Member.md)
  - [MemberList](docs/MemberList.md)
+ - [MemberOfATeam](docs/MemberOfATeam.md)
  - [ProtobufAny](docs/ProtobufAny.md)
+ - [RequestInviteDetails](docs/RequestInviteDetails.md)
  - [RpcStatus](docs/RpcStatus.md)
  - [Team](docs/Team.md)
  - [TeamList](docs/TeamList.md)

@@ -18,6 +18,7 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.lab5e.user.model.UserProfile;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -27,25 +28,33 @@ import org.junit.Test;
 
 
 /**
- * Model tests for AcceptInviteRequest
+ * Model tests for MemberOfATeam
  */
-public class AcceptInviteRequestTest {
-    private final AcceptInviteRequest model = new AcceptInviteRequest();
+public class MemberOfATeamTest {
+    private final MemberOfATeam model = new MemberOfATeam();
 
     /**
-     * Model tests for AcceptInviteRequest
+     * Model tests for MemberOfATeam
      */
     @Test
-    public void testAcceptInviteRequest() {
-        // TODO: test AcceptInviteRequest
+    public void testMemberOfATeam() {
+        // TODO: test MemberOfATeam
     }
 
     /**
-     * Test the property 'code'
+     * Test the property 'role'
      */
     @Test
-    public void codeTest() {
-        // TODO: test code
+    public void roleTest() {
+        // TODO: test role
+    }
+
+    /**
+     * Test the property 'user'
+     */
+    @Test
+    public void userTest() {
+        // TODO: test user
     }
 
 }

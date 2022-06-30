@@ -433,7 +433,7 @@ public class Example {
 
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | The team ID
-    InviteRequest body = new InviteRequest(); // InviteRequest | 
+    RequestInviteDetails body = new RequestInviteDetails(); // RequestInviteDetails | 
     try {
       Invite result = apiInstance.generateInvite(teamId, body);
       System.out.println(result);
@@ -453,7 +453,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **String**| The team ID |
- **body** | [**InviteRequest**](InviteRequest.md)|  |
+ **body** | [**RequestInviteDetails**](RequestInviteDetails.md)|  |
 
 ### Return type
 
@@ -962,7 +962,7 @@ public class Example {
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | 
     String userId = "userId_example"; // String | 
-    Member body = new Member(); // Member | 
+    MemberOfATeam body = new MemberOfATeam(); // MemberOfATeam | 
     try {
       Member result = apiInstance.updateMember(teamId, userId, body);
       System.out.println(result);
@@ -983,7 +983,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **String**|  |
  **userId** | **String**|  |
- **body** | [**Member**](Member.md)|  |
+ **body** | [**MemberOfATeam**](MemberOfATeam.md)|  |
 
 ### Return type
 
@@ -1041,7 +1041,7 @@ public class Example {
 
     TeamsApi apiInstance = new TeamsApi(defaultClient);
     String teamId = "teamId_example"; // String | 
-    Team body = new Team(); // Team | 
+    ATeam body = new ATeam(); // ATeam | 
     try {
       Team result = apiInstance.updateTeam(teamId, body);
       System.out.println(result);
@@ -1061,7 +1061,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **teamId** | **String**|  |
- **body** | [**Team**](Team.md)|  |
+ **body** | [**ATeam**](ATeam.md)|  |
 
 ### Return type
 

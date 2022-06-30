@@ -1,14 +1,14 @@
 
 
-# InviteRequest
+# MemberOfATeam
 
 
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**teamId** | **String** |  |  [optional]
-**code** | **String** | The invite code. |  [optional]
+**role** | **String** |  |  [optional]
+**user** | [**UserProfile**](UserProfile.md) |  |  [optional]
 
 
 
